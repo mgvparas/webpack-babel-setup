@@ -1,1 +1,3 @@
-document.write('Hello World');
+import HelloWorld from './App';
+
+document.write(HelloWorld);

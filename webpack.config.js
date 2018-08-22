@@ -7,17 +7,25 @@ const paths = {
     SRC: path.resolve(__dirname, 'src'), 
 };
 
-// Webpack configuration
 module.exports = {
     entry: path.join(paths.JS, 'index.js'),
     output: {
         path: paths.DIST,
         filename: 'bundle.js'
     },
-    mode: 'development',
+    // Use webpack's built-in development optimizations
+    mode: 'development', 
     plugins: [
+        // index.html is used as a template in which it'll inject bundled app.
         new HtmlWebpackPlugin({
             template: path.join(paths.SRC, 'index.html'),
         }),
-    ]
+    ],
+    module: {
+        rules: [{ test: /\.(js|jsx)$/, exclude: /node_modules/, use: [ 'babel-loader', ]}],
+    },
+    // Enable importing JS files without specifying their's extenstion
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    },
 };
