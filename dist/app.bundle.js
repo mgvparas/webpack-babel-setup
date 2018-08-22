@@ -81,19 +81,43 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/js/App.css":
+/*!************************!*\
+  !*** ./src/js/App.css ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// const body = document.getElementsByTagName('body')[0];\r\n// const scriptTag = document.createElement('script');\r\n\r\n// scriptTag.setAttribute('type', 'module');\r\n// scriptTag.setAttribute('src', 'main.js');\r\n\r\n// body.appendChild(scriptTag);\r\n\r\nconsole.log('Hello World!');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/js/App.css?");
+
+/***/ }),
+
+/***/ "./src/js/App.js":
+/*!***********************!*\
+  !*** ./src/js/App.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\n__webpack_require__(/*! ./App.css */ \"./src/js/App.css\");\n\nexports.default = 'Hello World!';\n\n//# sourceURL=webpack:///./src/js/App.js?");
+
+/***/ }),
+
+/***/ "./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _App = __webpack_require__(/*! ./App */ \"./src/js/App.js\");\n\nvar _App2 = _interopRequireDefault(_App);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\ndocument.write(_App2.default);\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ })
 
